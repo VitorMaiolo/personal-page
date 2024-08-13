@@ -1,10 +1,73 @@
 <!DOCTYPE html>
-<html lang="pr-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop Tecnológico</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
-    <h1>Minha página</h1>
+    <header>
+        <div class="container">
+            <h1>Workshop Tecnológico</h1>
+            <nav>
+                <ul>
+                    <li><a href="#agenda">Agenda</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#inscricao">Inscrição</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="agenda" class="section">
+        <div class="container">
+            <h2>Agenda</h2>
+            <ul>
+                <li><strong>09:00 - 10:00:</strong> Abertura e Boas-vindas</li>
+                <li><strong>10:00 - 12:00:</strong> Palestra sobre Inovação Tecnológica</li>
+                <li><strong>12:00 - 13:00:</strong> Intervalo para Almoço</li>
+                <li><strong>13:00 - 15:00:</strong> Workshop Prático</li>
+                <li><strong>15:00 - 16:00:</strong> Sessão de Perguntas e Respostas</li>
+                <li><strong>16:00 - 17:00:</strong> Encerramento</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contato" class="section">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Para mais informações, entre em contato conosco:</p>
+            <ul>
+                <li><strong>Email:</strong> contato@workshoptecnologico.com</li>
+                <li><strong>Telefone:</strong> (11) 1234-5678</li>
+                <li><strong>Endereço:</strong> Rua Exemplo, 123, São Paulo, SP</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="inscricao" class="section">
+        <div class="container">
+            <h2>Inscrição</h2>
+            <form action="inscricao.php" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <button type="submit">Inscrever-se</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Workshop Tecnológico. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
